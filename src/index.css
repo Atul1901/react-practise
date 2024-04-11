@@ -1,0 +1,13 @@
+.wrapper {
+  background-color: #f0efff;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.value {
+  text-align: center;
+  font-size: 24px;
+  font-weight: 600;
+}
