@@ -1,8 +1,7 @@
 import React from "react";
 
-const Count = ({ plus, minus }) => {
-  const value = plus + minus;
-  return <div className="value">{value}</div>;
+const Count = ({ plus }) => {
+  return <div className="value">{plus}</div>;
 };
 
 export default Count;
