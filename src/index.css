@@ -1,16 +1,14 @@
-.body {
-  margin: 0px !important;
-  padding: 0px !important;
-  position: relative;
-}
-
-.wrapper {
+.app-content {
   background-color: #f0efff;
-  height: 100vh;
+}
+.wrapper {
+  /* height: 100vh; */
   display: flex;
-  gap: 140px;
+  /* gap: 150px; */
+  flex: 1;
+
   flex-direction: column;
-  justify-content: center;
+  /* justify-content: center; */
   align-items: center;
 }
 
@@ -24,4 +22,64 @@
   position: fixed;
   top: 10px;
   right: 20px;
+  color: white;
+  font-size: 18px;
+}
+
+.navbar {
+  /* border: 2px solid black; */
+  padding-left: 20px;
+  background: #4d47c3;
+  color: white;
+  height: 70px;
+  border-radius: 6px;
+  font-size: 26px;
+  font-weight: 600;
+  display: flex;
+  align-items: center;
+}
+
+.input-field {
+  width: 447px;
+  height: 40px;
+  top: 350px;
+  background-color: #f0efff;
+  left: 1211px;
+  padding: 0px 78px 0px 0px;
+  gap: 0px;
+  opacity: 0px;
+  padding: 20px;
+  font-size: 18px;
+}
+
+.input-field::placeholder {
+}
+.count-info-card {
+  /* width: 300px; */
+  width: calc(
+    60% - 300px
+  ); /* Each card takes up 50% width with 10px margin between */
+  margin-bottom: 120px;
+
+  display: flex;
+  align-items: center;
+  /* background-color: white; */
+}
+
+.count-info-card:hover {
+  transform: scale(1.05); /* Scale the card slightly on hover */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1); /* Add a subtle box shadow on hover */
+}
+
+.invalid {
+  font-size: 36px;
+  font-weight: 700;
+  color: grey;
+}
+
+.all-cards {
+  display: flex;
+  flex-wrap: wrap;
+  /* gap: 20px; */
+  justify-content: space-around;
 }
