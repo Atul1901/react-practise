@@ -62,8 +62,10 @@
   margin-bottom: 120px;
 
   display: flex;
+  /* flex: 2; */
   align-items: center;
   /* background-color: white; */
+  /* border-radius: 10px; */
 }
 
 .count-info-card:hover {

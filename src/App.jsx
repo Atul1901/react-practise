@@ -5,6 +5,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Register from "./pages/Register";
 import Home from "./pages/Home";
 import Counter from "./pages/Counter";
+import Upcoming from "./pages/Upcoming";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
           <Route path="/" element={<Register />} />
           <Route path="*" element={<Register />} />
           <Route path="/counter" element={<Counter />} />
+          <Route path="/upcoming" element={<Upcoming />} />
         </Routes>
       </BrowserRouter>
     </>
