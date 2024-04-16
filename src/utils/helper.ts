@@ -35,7 +35,6 @@ export function wishing() {
 
   let index = 1;
   index = currentSeconds % 10;
-  console.log("index:", index);
 
   wishData.color = colors[index];
 
