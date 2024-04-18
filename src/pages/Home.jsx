@@ -7,12 +7,45 @@ import { useLocation, useNavigate } from "react-router-dom";
 import CounterInfoCard from "../components/CounterInfoCard";
 
 const Home = () => {
-  const navigate = useNavigate();
   const routeParams = useLocation();
   const { state } = routeParams || {};
   const { name } = state || {};
 
-  // console.log("name:", name);
+  const cardData = {
+    info: [
+      {
+        title: "counter",
+        desc: "Counter is used to increment and decrement of the count, there would be 2 buttons one is + and - if you click on  +the number will get increased and if you click on - then the number get decreased ",
+        navi: "/counter",
+      },
+      {
+        title: "Dhoni",
+        desc: "player of CSK and was once captain of indian team",
+        navi: "/upcoming",
+      },
+      {
+        title: "Messi",
+        desc: "player of argentina also have 2 or 3 golden boot award",
+        navi: "/upcoming",
+      },
+      {
+        title: "Lebron",
+        desc: "player of Basketball who is currently the plsying with Lakers and is one of the best in USA ",
+        navi: "/upcoming",
+      },
+    ],
+  };
+  const renderElement = cardData.info.map((item, key) => {
+    return (
+      <CounterInfoCard
+        title={item.title}
+        desc={item.desc}
+        id={key}
+        navig={`${item.navi}/${key + 1}`}
+        // key={key}u
+      />
+    );
+  });
 
   return (
     <div>
@@ -23,55 +56,7 @@ const Home = () => {
           <Navbar name={name} />
           <div className="wrapper">
             <Greetings />
-            <div className="all-cards">
-              <div
-                onClick={() => navigate("/counter")}
-                className="count-info-card"
-              >
-                <CounterInfoCard
-                  title={"Counter"}
-                  desc={
-                    "Counter is used to increment and decrement of the count, there would be 2 buttons one is + and - if you click on  +the number will get increased and if you click on - then the number get decreased "
-                  }
-                  // navigate={"/counter"}
-                  navigate={navigate("/counter")}
-                />
-              </div>
-              <div
-                onClick={() => navigate("/upcoming")}
-                className="count-info-card"
-              >
-                <CounterInfoCard
-                  title={"Dhoni"}
-                  desc={"player of CSK and was once captain of indian team"}
-                  navigate={"/upcoming"}
-                />
-              </div>
-              <div
-                onClick={() => navigate("/upcoming")}
-                className="count-info-card"
-              >
-                <CounterInfoCard
-                  title={"Messi"}
-                  desc={
-                    "player of argentina also have 2 or 3 golden boot award"
-                  }
-                  navigate={"/upcoming"}
-                />
-              </div>
-              <div
-                onClick={() => navigate("/upcoming")}
-                className="count-info-card"
-              >
-                <CounterInfoCard
-                  title={"Lebron"}
-                  desc={
-                    "player of Basketball who is currently the plsying with Lakers and is one of the best in USA  "
-                  }
-                  navigate={"/upcoming"}
-                />
-              </div>
-            </div>
+            <div className="all-cards">{renderElement}</div>
           </div>
         </div>
       )}

@@ -16,8 +16,8 @@ export default function App() {
           <Route path="/register" element={<Register />} />
           <Route path="/" element={<Register />} />
           <Route path="*" element={<Register />} />
-          <Route path="/counter" element={<Counter />} />
-          <Route path="/upcoming" element={<Upcoming />} />
+          <Route path={`/counter/:id`} element={<Counter />} />
+          <Route path={`/upcoming/:id`} element={<Upcoming />} />
         </Routes>
       </BrowserRouter>
     </>
