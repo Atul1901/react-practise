@@ -42,7 +42,6 @@ const Home = () => {
         desc={item.desc}
         id={key}
         navig={`${item.navi}/${key + 1}`}
-        // key={key}u
       />
     );
   });

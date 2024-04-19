@@ -43,6 +43,11 @@ export default function InformationCard() {
           className="input-field"
           placeholder="Naam Daaaal !!!"
           onChange={(e) => setInputName(e.target.value)}
+          onKeyDown={(e) => {
+            if (e.key === "Enter") {
+              navigate("/home", { state: { name: inputName } });
+            }
+          }}
         />
         <Button
           variant="contained"

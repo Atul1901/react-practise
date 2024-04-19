@@ -12,12 +12,9 @@ function Greetings() {
     setGreeting(value.wish);
     setColor(value.color);
     setTime(value.time);
-    // console.log("color> ", color);
   }
 
   useEffect(() => {
-    // Call the function to set the initial greeting
-    // getGreeting();
     setInterval(getGreeting, 1000);
   }, []); // Empty dependency array ensures the effect runs only once on component mount
 

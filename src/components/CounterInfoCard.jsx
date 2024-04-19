@@ -34,8 +34,6 @@ export default function CounterInfoCard({ title, desc, navig }) {
             display: "flex",
             flexDirection: "column",
             gap: "30px",
-            // background: "#4D47C3",
-            // color: "white",
           }}
         >
           <Typography
@@ -45,9 +43,6 @@ export default function CounterInfoCard({ title, desc, navig }) {
           </Typography>
           <Divider />
           <Typography sx={{ textAlign: "center", fontSize: 16 }}>
-            {/* Counter is used to increment and decrement of the count, there would
-            be 2 buttons one is '+' and '-' if you click on '+' the number will
-            get increased and if you click on '-' then the number get decreased */}
             {desc}
           </Typography>
         </CardContent>

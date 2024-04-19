@@ -3,7 +3,7 @@ import Cards from "../components/Cards";
 
 const Counter = () => {
   return (
-    <div className="wrapper">
+    <div className="wrapper" style={{ marginTop: "45px" }}>
       <Cards />
     </div>
   );
